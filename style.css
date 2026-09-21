@@ -7727,6 +7727,125 @@ body:has(#watchPage:not(.hidden)) .mobile-bottom-nav {
     font-size: 15px;
 }
 
+@media (min-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #homePage {
+        min-height: 100vh;
+    }
+
+    #homePage .app-header {
+        max-width: 1380px;
+        margin: 0 auto;
+        padding: 22px 42px;
+    }
+
+    #homePage .home-main {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 360px;
+        align-items: start;
+        gap: 34px;
+        max-width: 1380px;
+        margin: 0 auto;
+        padding: 28px 42px 64px;
+    }
+
+    #homePage .featured-movie {
+        min-height: 590px;
+        height: auto;
+        border-radius: 26px;
+    }
+
+    #homePage .featured-content {
+        max-width: 620px;
+        padding: 72px 58px 54px;
+    }
+
+    #homePage .featured-title {
+        max-width: 620px;
+        font-size: clamp(42px, 4.2vw, 68px);
+        line-height: 0.98;
+    }
+
+    #homePage .featured-desc {
+        max-width: 540px;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    #homePage .vibe-buttons-container {
+        max-width: 440px;
+    }
+
+    #homePage .popular-section {
+        min-width: 0;
+        margin-top: 0;
+        padding: 24px 0 0;
+    }
+
+    #homePage .section-header {
+        align-items: flex-start;
+    }
+
+    #homePage .movies-scroll {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 14px;
+        overflow: visible;
+    }
+
+    #homePage .movie-card {
+        min-width: 0;
+    }
+
+    #homePage .movie-poster {
+        aspect-ratio: 0.68;
+        height: auto;
+    }
+
+    .mobile-bottom-nav {
+        display: none !important;
+    }
+
+    #catalogPage .catalog-page-content,
+    #detailPage .detail-page-content {
+        max-width: 1380px;
+        margin: 0 auto;
+        padding-left: 42px;
+        padding-right: 42px;
+    }
+
+    #catalogPage .catalog-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 28px 18px;
+    }
+
+    #catalogPage .catalog-poster {
+        aspect-ratio: 0.68;
+    }
+
+    #roomsPage .rooms-page-content {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 34px 42px 80px;
+    }
+
+    #roomsPage .rooms-actions {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    #watchPage .watch-layout {
+        grid-template-columns: minmax(0, 1fr) 340px;
+        gap: 24px;
+        max-width: 1480px;
+        margin: 0 auto;
+        padding: 24px 42px 42px;
+    }
+}
+
 @media (max-width: 767px) {
     #watchPage .watch-header {
         flex: 0 0 58px;
