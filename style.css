@@ -496,6 +496,29 @@ button {
     background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.75) 100%);
 }
 
+.poster-new-spider,
+.poster-new-london,
+.poster-new-michael,
+.poster-new-thriller {
+    background-size: cover;
+    background-position: center;
+}
+
+.poster-new-spider { background-image: url("images/images (3).jpg"); }
+.poster-new-london { background-image: url("images/images (4).jpg"); }
+.poster-new-michael { background-image: url("images/images (5).jpg"); }
+.poster-new-thriller { background-image: url("images/images (6).jpg"); }
+
+.poster-new-spider::after,
+.poster-new-london::after,
+.poster-new-michael::after,
+.poster-new-thriller::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 52%, rgba(0, 0, 0, 0.72) 100%);
+}
+
 .movie-title {
     font-size: 13.5px;
     font-weight: 600;
@@ -7741,9 +7764,10 @@ body:has(#watchPage:not(.hidden)) .mobile-bottom-nav {
     }
 
     #homePage .app-header {
-        max-width: 1440px;
-        margin: 0 auto;
-        padding: 14px 42px;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 14px clamp(24px, 5vw, 80px);
     }
 
     #homePage .header-search {
@@ -7752,14 +7776,16 @@ body:has(#watchPage:not(.hidden)) .mobile-bottom-nav {
 
     #homePage .home-main {
         display: block;
-        max-width: 1440px;
-        margin: 0 auto;
-        padding: 0 42px 64px;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0 0 64px;
     }
 
     #homePage .featured-movie {
         min-height: min(620px, calc(100vh - 112px));
         height: auto;
+        width: 100vw;
         margin: 0;
         border-radius: 0 0 26px 26px;
     }
@@ -7787,7 +7813,7 @@ body:has(#watchPage:not(.hidden)) .mobile-bottom-nav {
 
     #homePage .popular-section {
         margin-top: 0;
-        padding: 40px 0 0;
+        padding: 40px clamp(24px, 5vw, 80px) 0;
     }
 
     #homePage .section-header {
