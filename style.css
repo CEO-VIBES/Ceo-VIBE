@@ -7737,30 +7737,32 @@ body:has(#watchPage:not(.hidden)) .mobile-bottom-nav {
     }
 
     #homePage .app-header {
-        max-width: 1380px;
+        max-width: 1440px;
         margin: 0 auto;
-        padding: 22px 42px;
+        padding: 14px 42px;
+    }
+
+    #homePage .header-search {
+        flex: 0 0 280px;
     }
 
     #homePage .home-main {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) 360px;
-        align-items: start;
-        gap: 34px;
-        max-width: 1380px;
+        display: block;
+        max-width: 1440px;
         margin: 0 auto;
-        padding: 28px 42px 64px;
+        padding: 0 42px 64px;
     }
 
     #homePage .featured-movie {
-        min-height: 590px;
+        min-height: min(620px, calc(100vh - 112px));
         height: auto;
-        border-radius: 26px;
+        margin: 0;
+        border-radius: 0 0 26px 26px;
     }
 
     #homePage .featured-content {
         max-width: 620px;
-        padding: 72px 58px 54px;
+        padding: 94px 58px 64px;
     }
 
     #homePage .featured-title {
@@ -7780,9 +7782,8 @@ body:has(#watchPage:not(.hidden)) .mobile-bottom-nav {
     }
 
     #homePage .popular-section {
-        min-width: 0;
         margin-top: 0;
-        padding: 24px 0 0;
+        padding: 40px 0 0;
     }
 
     #homePage .section-header {
@@ -7790,19 +7791,53 @@ body:has(#watchPage:not(.hidden)) .mobile-bottom-nav {
     }
 
     #homePage .movies-scroll {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 22px 14px;
-        overflow: visible;
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        padding-bottom: 12px;
     }
 
     #homePage .movie-card {
-        min-width: 0;
+        flex: 0 0 178px;
     }
 
     #homePage .movie-poster {
         aspect-ratio: 0.68;
         height: auto;
+        width: 178px;
+    }
+
+    .desktop-nav {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-left: auto;
+    }
+
+    .desktop-nav-item,
+    .desktop-nav-login {
+        border: 0;
+        border-radius: 10px;
+        padding: 10px 13px;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.68);
+        cursor: pointer;
+        font: inherit;
+        font-size: 12px;
+        font-weight: 650;
+        white-space: nowrap;
+    }
+
+    .desktop-nav-item:hover,
+    .desktop-nav-item.active {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+    }
+
+    .desktop-nav-login {
+        margin-left: 6px;
+        background: linear-gradient(135deg, #a855f7, #7c3aed);
+        color: #fff;
     }
 
     .mobile-bottom-nav {
@@ -7843,6 +7878,16 @@ body:has(#watchPage:not(.hidden)) .mobile-bottom-nav {
         max-width: 1480px;
         margin: 0 auto;
         padding: 24px 42px 42px;
+    }
+}
+
+.desktop-nav {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .desktop-nav {
+        display: flex;
     }
 }
 

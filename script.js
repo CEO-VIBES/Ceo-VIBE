@@ -98,7 +98,7 @@ const mobileRooms = document.getElementById("mobileRooms");
 const mobileLogin = document.getElementById("mobileLogin");
 const authModal = document.getElementById("authModal");
 const authClose = document.getElementById("authClose");
-const mobileNavItems = document.querySelectorAll(".mobile-nav-item");
+const mobileNavItems = document.querySelectorAll(".mobile-nav-item, .desktop-nav-item, .desktop-nav-login");
 
 // Auth
 const authSwitch = document.getElementById("authSwitch");
