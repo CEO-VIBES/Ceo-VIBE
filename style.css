@@ -7733,6 +7733,10 @@ body:has(#watchPage:not(.hidden)) .mobile-bottom-nav {
     }
 
     #homePage {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
         min-height: 100vh;
     }
 
