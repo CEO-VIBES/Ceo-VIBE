@@ -560,28 +560,32 @@ function applyHomeMoviePosters() {
 const featuredSlides = [
     {
         title: "Человек-паук: Новый день",
-        image: "images/poster1.png",
+        desktopImage: "images/posterNEWDAY.png",
+        mobileImage: "images/poster1.png",
         description: "Одинокий и повзрослевший Питер Паркер полностью посвящает себя борьбе с преступностью.",
         genre: "фантастика",
         year: "2026"
     },
     {
         title: "Твоя вина: Лондон",
-        image: "images/poster_youfauly.png",
+        desktopImage: "images/posterYOURFOULT.png",
+        mobileImage: "images/poster_youfauly.png",
         description: "Новая история любви, в которой расстояние, ошибки прошлого и большой город проверяют чувства героев.",
         genre: "драма",
         year: "2025"
     },
     {
         title: "Майкл",
-        image: "images/michael_poster.png",
+        desktopImage: "images/posterMICHAEL.png",
+        mobileImage: "images/michael_poster.png",
         description: "История музыканта, чей голос, движение и талант изменили мировую сцену навсегда.",
         genre: "биография · музыка",
         year: "2025"
     },
     {
         title: "Холод",
-        image: "images/xolod_poster.png",
+        desktopImage: "images/xolod.png",
+        mobileImage: "images/xolod_poster.png",
         description: "В закрытом мире, где каждый шаг оставляет след, героиня пытается сохранить свободу и себя.",
         genre: "триллер",
         year: "2025"
@@ -594,8 +598,11 @@ function setFeaturedSlide(index, restartTimer) {
     activeFeaturedTitle = slide.title;
     featuredMovie.dataset.slide = String(index);
     if (featuredBackground) {
+        const image = window.matchMedia("(min-width: 1024px)").matches
+            ? slide.desktopImage
+            : slide.mobileImage;
         featuredBackground.style.opacity = "0";
-        featuredBackground.style.setProperty("background-image", "url('" + slide.image + "')", "important");
+        featuredBackground.style.setProperty("background-image", "url('" + image + "')", "important");
         window.requestAnimationFrame(function () {
             featuredBackground.style.opacity = "1";
         });
